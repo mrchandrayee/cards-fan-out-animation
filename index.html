@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a12">
+  <title>Cards Fan-Out Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Cards Fan-Out Animation</h1>
+
+    <section class="demo-frame" aria-label="Interactive fan-out card deck">
+      <div class="deck" id="deck">
+        <button class="card card-creative" type="button" data-card="0" aria-pressed="false">
+          <span class="card-number">01</span>
+          <span class="card-copy">
+            <strong>Creative</strong>
+            <small>Build beautiful and creative digital experiences.</small>
+          </span>
+        </button>
+        <button class="card card-design" type="button" data-card="1" aria-pressed="false">
+          <span class="card-number">02</span>
+          <span class="card-copy">
+            <strong>Design</strong>
+            <small>Modern interfaces with smooth interactions.</small>
+          </span>
+        </button>
+        <button class="card card-explore is-active" type="button" data-card="2" aria-pressed="true">
+          <span class="card-number">03</span>
+          <span class="card-copy">
+            <strong>Explore</strong>
+            <small>Discover new ideas and interactive experiences.</small>
+          </span>
+        </button>
+        <button class="card card-develop" type="button" data-card="3" aria-pressed="false">
+          <span class="card-number">04</span>
+          <span class="card-copy">
+            <strong>Develop</strong>
+            <small>Turn ideas into powerful web experiences.</small>
+          </span>
+        </button>
+        <button class="card card-launch" type="button" data-card="4" aria-pressed="false">
+          <span class="card-number">05</span>
+          <span class="card-copy">
+            <strong>Launch</strong>
+            <small>Create, launch and grow your next project.</small>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <div class="hint">Hover, focus or tap a card to bring it forward</div>
+
+    <div class="code-caption">Comment "Cards" for code</div>
+    <section class="code-frame" aria-label="CSS source code">
+      <pre><code>.card {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 240px; height: 340px;
+  margin-left: -120px;
+  margin-top: -170px;
+  border-radius: 24px;
+  padding: 25px; display: flex;
+  align-items: flex-end; color: white;
+  transform-origin: 50% 100%;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s ease, filter 0.6s ease;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+  overflow: hidden; cursor: pointer;
+  will-change: transform;
+}</code></pre>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
